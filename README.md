@@ -41,6 +41,25 @@ This project is a Single Page Application (SPA) built with CodeIgniter 4, Alpine
 7. Start the development server:
    php spark serve
 
+Alternatively, if you're using a different web server (like Apache or Nginx), ensure your server is configured to point to the `public` directory of your project.
+
+## Server Configuration
+
+### Apache
+
+If you're using Apache, ensure you have mod_rewrite enabled and use the following `.htaccess` file in your `public` directory:
+
+```apache
+<IfModule mod_rewrite.c>
+ Options +FollowSymlinks
+ RewriteEngine On
+
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
+
+
 ## Project Structure
 
 - `app/Controllers/`: Contains all the controllers
@@ -51,6 +70,7 @@ This project is a Single Page Application (SPA) built with CodeIgniter 4, Alpine
 - `assets/`: AdminLTE assets
 
 ## Key Files
+
 
 - `app/Views/layout/main.php`: Main layout file
 - `public/js/router.js`: Handles SPA routing
@@ -96,3 +116,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 - Alpine.js
 - AdminLTE
 - All other open-source libraries used in this project
+```
