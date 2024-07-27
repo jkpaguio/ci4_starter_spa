@@ -58,7 +58,7 @@ If you're using Apache, ensure you have mod_rewrite enabled and use the followin
  RewriteCond %{REQUEST_FILENAME} !-f
  RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
-
+```
 
 ## Project Structure
 
