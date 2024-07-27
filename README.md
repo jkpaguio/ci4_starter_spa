@@ -102,13 +102,6 @@ If you're using Apache, ensure you have mod_rewrite enabled and use the followin
 - For database connection issues, double-check your `.env` file settings.
 - If AdminLTE components are not working, make sure all required CSS and JS files are properly included.
 
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 
